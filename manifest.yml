@@ -1,0 +1,8 @@
+---
+applications:
+- name: venues-chatbot
+  buildpack: java_buildpack
+  path: target/ChatBot-0.0.1-SNAPSHOT.jar
+  memory: 512M
+  instances: 1
+  random-route: true
