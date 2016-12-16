@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+<title>Spring Core Online Tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link
+	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+<script src="../static/js/chat.js" th:src="@{js/chat.js}"></script>
+
+<link href="../static/css/spring-core.css"
+	th:href="@{css/chat-style.css}" rel="stylesheet" media="screen" />
+</head>
+<body>
+	<div class="container text-center">
+		<div class="row">
+			<div class="round hollow text-center">
+				<a href="#" id="addClass"><span
+					class="glyphicon glyphicon-comment"></span><h4>Click Here to Show Chat window</h4></a>
+			</div>
+<!-- 			<div class="round hollow text-center">
+				<a href="#" id="removeClass"><span
+					class="glyphicon glyphicon-comment"></span> <h4>Click Here to Hide Chat window</h4></a>
+			</div>
+ -->
+		</div>
+	</div>
+
+
+	<div class="chat_window" style="display: none">
+	<div class="top_menu">
+		<div class="buttons">
+			<div class="button close"></div>
+			<div class="button minimize"></div>
+			<div class="button maximize"></div>
+		</div>
+		<div class="title">Chat</div>
+	</div>
+	<ul class="messages"></ul>
+	<div class="bottom_wrapper clearfix">
+		<div class="message_input_wrapper">
+			<input class="message_input" id="message_input" placeholder="Type your message here..." />
+		</div>
+		<div class="send_message" id="send_message">
+			<div class="icon"></div>
+			<div class="text">Send</div>
+		</div>
+	</div>
+</div>
+<div class="message_template">
+	<li class="message"><div class="avatar"></div>
+		<div class="text_wrapper">
+			<div class="text"></div>
+		</div></li>
+</div>
+</body>
+</html>
